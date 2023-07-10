@@ -1,0 +1,160 @@
+.page-sidebar
+{
+	text-align:left;
+	background:#EEE;
+	padding:15px;
+	margin-bottom:15px;
+}
+
+.social .icon
+{
+    color:#017DB0 !important;
+}
+
+.social
+{
+	text-align:center;
+	margin-bottom:10px;
+}
+
+@media screen and (min-width:768px)
+{
+	.social
+	{
+		text-align:right;
+	}
+}
+
+.preview-container
+{
+	border:2px solid #333;
+	margin-bottom:15px;
+	border-radius:4px;
+}
+
+.preview
+{
+	padding:15px 15px;
+}
+
+.paper-header
+{
+	max-width:300px;
+	margin:0 auto;
+}
+
+.preview-image-container
+{
+	margin:10px 0;
+	text-align:center;
+}
+
+.preview-image
+{
+	width: 100%;
+}
+
+.page-form
+{
+	font-size:0.5em;
+}
+
+@media screen and (min-width:480px)
+{
+	.page-form
+	{
+		font-size:0.625em;
+	}
+}
+
+@media screen and (min-width:640px)
+{
+	.page-form
+	{
+		font-size:0.75em;
+	}
+}
+
+.page-form .field
+{
+	padding:3px 0;
+}
+
+.page-form .grid-row
+{
+	margin:5px;
+	padding:0 !important;
+}
+
+.page-form .user-input
+{
+	width:70%;
+	display:inline-block;
+	border-bottom:1px solid #333;
+}
+
+@media screen and (min-width:480px)
+{
+	.page-form .user-input
+	{
+		width:80%;
+		display:inline-block;
+	}
+}
+
+@media screen and (min-width:640px)
+{
+	.page-form .user-input
+	{
+		width:60%;
+	}
+}
+
+@media screen and (min-width:1200px)
+{
+	.page-form .user-input
+	{
+		width:68%;
+	}
+}
+
+.sidebar-form .input-textbox
+{
+	width:100%;
+}
+
+.action-buttons
+{
+	text-align:center;
+	margin-bottom:10px;
+}
+
+@media screen and (min-width:768px)
+{
+	.action-buttons
+	{
+		text-align:left;
+	}
+}
+
+/******************
+	PRINT STYLES 
+******************/
+
+@media print
+{
+	.print-only	.preview
+	{
+		border:0;
+		border-radius:0;
+		padding:0;
+		margin-bottom:0;
+		font-size:18pt;
+	}
+	
+	.print-only .preview-image
+	{
+		width: 91%;
+		margin:0 auto;
+	}
+}

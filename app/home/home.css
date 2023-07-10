@@ -1,0 +1,30 @@
+.coloring-page
+{
+	border:2px solid #333;
+	padding:20px;
+	width:50%;
+}
+
+.page-sidebar
+{
+	background:#EEE;
+	padding:15px;
+}
+
+.coloring-page-container
+{
+	text-align:center;
+}
+
+.button-color-online
+{
+	display:none;
+}
+
+@media screen and (min-width:640px)
+{
+	.button-color-online
+	{
+		display:inline-block;
+	}
+}

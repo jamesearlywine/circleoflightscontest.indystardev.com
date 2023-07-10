@@ -1,0 +1,66 @@
+<!-- page specific css -->
+<link href='app/home/home.css?ver=6' rel="stylesheet">
+<div style="background-color: black; color: yellow; width: 100%; height: 34px; text-align: center; font-size: 24px; ">!!!DEMO PURPOSES ONLY!!! !!!DEMO PURPOSES ONLY!!! !!!DEMO PURPOSES ONLY!!!</div>
+<div class="header-container content-container">
+    <div class="shadow-top content-container"></div>
+    <div class="banner">
+        <a ng-href="#/app/home"><img src="common/img/DigitalColoringContestHeader.jpg" class="img-responsive" alt="Carson's Coloring Contest for Circle of Lights" /></a>
+    </div><!-- end .banner -->
+</div><!-- end .header-container -->
+
+<div class="main-container content-container no-print">
+    <div class="grid-row">
+        <div class="grid-col-md-4 coloring-page-container" style="padding-right:15px">
+            <p><a ui-sref="appCanvas" class="button button-orange button-color-online"><i class="icon icon-edit"> Color Online</i></a></p>
+            <img src="common/img/coloring-page.jpg" class="img-responsive img-thumbnail" alt="coloring page" />
+            <p class="action-buttons">
+                <a class="button button-blue"
+                    ng-click="print()"
+                ><i class="icon icon-print"> Print</i></a>
+                <a class="button button-blue"
+                    ng-click="reportDownload()"
+                    href="backend/public/index.php/downloadContestPDF"
+                ><i class="icon icon-download"> Download</i>
+                </a>
+            </p>
+        </div>
+        <div class="grid-col-md-8">
+           <h1 class="subheading">Flip the Switch + Win College Choice 529 Scholarships</h1>
+           <p>Children age 3 - 12 have the opportunity to “flip the switch” at Downtown Indy, Inc.’s Circle of Lights&reg; presented by IBEW #481 Friday, Nov. 25 via the Carson’s Coloring Contest.  College Choice 529 scholarships and Carson’s gift cards will be awarded to five finalists. Pick up a coloring sheet by Nov. 14 at Carson’s Downtown or the IBEW 481 office or print additional copies at <a href="http://www.downtownindy.org" target="_blank">www.downtownindy.org</a>. Contest ends Nov. 14.</p>
+           <p><a ng-click="openContestRules()" class="button button-blue noselect"><i class="icon icon-trophy"></i>See Contest Entry Rules</a></p>
+           <p>
+              <span class="bold">Return Carson's coloring contest entries to:</span><br />
+              <span class="bold">Carson’s Department Store</span>, Circle Centre, One W. Washington Street, Indianapolis, Street level, adjacent to the escalator.
+            </p>
+            <p><span class="bold">Mail or Drop Off to: <br />
+                IBEW #481</span>, 1828 N. Meridian Street, Suite 205, Indianapolis, IN 46202</p>
+        </div>
+    </div><!-- end .grid-row -->
+</div><!-- end .main-container -->
+
+<div id="footer" class="footer-container content-container">
+    <div class="footer-nav">
+        <div class="social">
+            <a ng-click="share('facebook')"><i class="icon icon-facebook-squared"></i></a>
+            <a ng-click="share('twitter')"><i class="icon icon-twitter"></i></a>
+            <a ng-click="share('googleplus')"><i class="icon icon-googleplus-rect"></i></a>
+            <a ng-click="share('pinterest')"><i class="icon icon-pinterest"></i></a>
+            <a ng-click="openSendmail()"><i class="icon icon-mail"></i></a>
+        </div><!-- end .social -->
+        
+        <a href="http://www.indystar.com" target="_blank"><img src="common/img/indystar-logo.jpg" alt="IndyStar logo" class="indystar-logo" /></a>
+    </div><!-- end .footer-nav -->
+    
+    <div class="shadow-bottom content-container"></div>
+</div><!-- end .footer-container -->
+
+<div class="print-only">
+    <div id="page-1">
+        <img src="common/img/CarsonsColoringContest_print-1.png"/>
+    </div>
+    <div class="page-break"></div>
+    <div id="page-2">
+        <img src="common/img/CarsonsColoringContest_print-2.png"/>
+    </div>
+</div>
+

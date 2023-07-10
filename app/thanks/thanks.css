@@ -1,0 +1,22 @@
+.shadow-bottom
+{
+	display:block;
+	background:url('../../common/img/shadow-bottom.png') top center no-repeat;
+	background-size:contain;
+	height:30px;
+}
+
+@media screen and (min-width:1200px)
+{
+	.shadow-bottom
+	{
+		background-size:cover;
+		margin-bottom:10px;
+	}
+}
+
+.thanks-heading
+{
+	text-align:center;
+}
+

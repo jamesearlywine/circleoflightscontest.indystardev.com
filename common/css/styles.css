@@ -1,0 +1,308 @@
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC:400,700);
+
+body
+{
+	font-family:"Arial", sans-serif;
+	background:#D09062 url('../img/texture.jpg') top center no-repeat;
+	background-size:cover;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+p
+{
+	margin:1em 0;
+}
+
+.bold
+{
+	font-weight:bold;
+}
+
+.align-left
+{
+	text-align:left;
+}
+
+.align-center
+{
+	text-align:center;
+}
+
+.align-right
+{
+	text-align:right;
+}
+
+.subheading
+{
+	font-size:1.25em;
+	font-weight:bold;
+}
+
+.shadow-top
+{
+	display:none;
+}
+
+@media screen and (min-width:640px)
+{
+	.shadow-top
+	{
+		display:block;
+		background:url('../img/shadow-top.png') bottom center no-repeat;
+		background-size:contain;
+		height:30px;
+	}
+}
+
+@media screen and (min-width:1200px)
+{
+	.shadow-top
+	{
+		background-size:cover;
+		margin-top:10px;
+	}
+}
+
+.banner
+{
+	background:#FFF;
+}
+
+.banner a
+{
+	padding:0;
+}
+
+.logo
+{
+	width:100%;
+	max-width:90%;
+}
+
+@media screen and (min-width:480px)
+{
+	.logo
+	{
+		max-width:320px;
+	}
+}
+
+.main-container
+{
+	background:#FFF;
+	position:relative;
+}
+
+@media screen and (min-width:768px)
+{
+	.main-container
+	{
+		padding:15px 15px;
+	}
+}
+
+.section-heading
+{
+	color:#0091CF;
+	font-weight:700;
+	font-size:1.5em;
+	text-align:center;
+}
+
+@media screen and (min-width:992px)
+{
+	.section-heading
+	{
+		text-align:left;
+	}
+}
+
+
+.indystar-logo
+{
+	max-width:200px;
+}
+
+.footer-nav
+{
+	background:#FFF;
+	text-align:center;
+	padding:0 0 15px 0;
+}
+
+.social .icon
+{
+	font-size:2em;
+	color:#000;
+}
+
+.social a
+{
+	padding:0;
+}
+
+/*
+.social a:hover
+{
+	opacity:0.7;
+}
+*/
+
+.no-padding
+{
+	padding:0;
+}
+
+.orange
+{
+	background:url('../../common/img/orange.png') top center no-repeat;
+	width:118px;
+	height:257px;
+	position:absolute;
+	top:200px;
+	left:0px;
+	visibility:hidden;
+	opacity:0;
+	-webkit-transition:all 0.5s;
+	transition:all 0.5s;
+}
+
+.green
+{
+	background:url('../../common/img/green.png') top center no-repeat;
+	width:73px;
+	height:319px;
+	position:absolute;
+	top:800px;
+	right:0;
+	visibility:hidden;
+	opacity:0;
+	-webkit-transition:all 0.5s;
+	transition:all 0.5s;
+}
+
+.blue
+{
+	background:url('../../common/img/blue.png') top center no-repeat;
+	width:190px;
+	height:173px;
+	position:absolute;
+	top:-25px;
+	right:50px;
+	visibility:hidden;
+	opacity:0;
+	-webkit-transition:all 0.5s;
+	transition:all 0.5s;
+}
+
+@media screen and (min-width:1100px)
+{
+	.orange
+	{
+		visibility:visible;
+		opacity:1;
+	}
+	
+	.green
+	{
+		visibility:visible;
+		opacity:1;
+	}
+}
+
+@media screen and (min-width:1600px)
+{
+	.blue
+	{
+		visibility:visible;
+		opacity:1;
+	}
+}
+
+.shadow-bottom
+{
+	display:none;
+}
+
+@media screen and (min-width:640px)
+{
+	.shadow-bottom
+	{
+		display:block;
+		background:url('../../common/img/shadow-bottom.png') top center no-repeat;
+		background-size:contain;
+		height:30px;
+	}
+}
+
+@media screen and (min-width:1200px)
+{
+	.shadow-bottom
+	{
+		background-size:cover;
+		margin-bottom:10px;
+	}
+}
+
+.align-justify
+{
+	text-align:justify;
+}
+
+.img-thumbnail
+{
+	border:2px solid #333;
+	width:auto;
+	max-height:480px;
+}
+
+@media screen and (min-width:992px)
+{
+	.img-thumbnail
+	{
+		max-height:100%;
+	}
+}
+
+.tiny-text
+{
+	font-size:0.875em;
+}
+
+.all-sponsor-logos
+{
+	background:#FFF;
+	padding:0 15px 15px 15px;
+}
+
+.error
+{
+	font-size:0.875em;
+	color:#F00;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+a:visited,
+a:hover,
+a:active,
+a:link 
+{
+	text-decoration: none;	
+}
+
+a,
+a.link:link,
+a.link:visited
+{
+	padding:0;
+}

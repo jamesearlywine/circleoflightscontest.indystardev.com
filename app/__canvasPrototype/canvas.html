@@ -1,0 +1,256 @@
+<!-- page specific css -->
+<link href='app/__canvasPrototype/canvas.css?ver=17' rel="stylesheet">
+<script src="app/__canvasPrototype/canvas-tools.js"></script>
+<script src="app/__canvasPrototype/drawer.js"></script>
+
+<div class="header-container content-container">
+    <div class="shadow-top content-container"></div>
+    <div class="buttons">
+        <div class="grid-row">
+            <div class="grid-col-xs-4 align-left">
+                <a ng-href="#/app/home" class="button button-default"><i class="icon icon-left-circle"><span class="button-label">Back</span></i></a>
+            </div>
+            <div class="grid-col-xs-4 align-center">
+                <a id="clear-canvas" class="button button-default"><i class="icon icon-ccw"><span class="button-label">Start Over</span></i></a>
+            </div>
+            <div class="grid-col-xs-4 align-right">
+                <a ng-href="#/app/preview" class="button button-orange"><i class="icon icon-ok"><span class="button-label"> I'm Done</span></i></a>
+            </div>
+        </div><!-- end .grid-row -->
+    </div><!-- end .buttons -->
+</div><!-- end .header-container -->
+
+<div class="main-container content-container">
+    <div id="canvasContainer" class="container-canvas">
+        <canvas id="canvas" class="canvas"></canvas>
+    </div><!-- end .canvas-container -->
+
+    <div class="tools-container grid-row">
+        <div class="grid-col-md-12 center">
+            <div class="grid-row no-padding">
+                <div id="eraser" class="eraser-container grid-col-xs-5 no-padding">
+                    <img id="eraser" src="../../common/img/eraser.png" class="eraser" alt="eraser" />
+                </div>
+                
+                <div class="point-size-container grid-col-xs-7 no-padding">
+                    <span class="size-label">SIZE:</span>
+                    <div id="size1" class="point-size point-size-1"></div>
+                    <div id="size2" class="point-size point-size-2 point-size-selected"></div>
+                    <div id="size3" class="point-size point-size-3"></div>
+                    <div id="size4" class="point-size point-size-4"></div>
+                </div>
+            </div><!-- end .grid-row -->
+        </div><!-- end .grid-col -->
+        
+        <div class="grid-col-md-12">
+            <div class="pencils-container">
+                <div class="pencils">
+                    <div id="brown" class="pencil pencil-brown">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-brown -->
+                    
+                    <div id="maroon" class="pencil pencil-maroon">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-maroon -->
+                    
+                    <div id="red" class="pencil pencil-red pencil-selected">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-red -->
+                    
+                    <div id="redOrange" class="pencil pencil-red-orange">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-red-orange -->
+                    
+                    <div id="orange" class="pencil pencil-orange">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-orange -->
+                    
+                    <div id="yellow" class="pencil pencil-yellow">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-yellow -->
+                    
+                    <div id="gold" class="pencil pencil-gold">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-gold -->
+                    
+                    <div id="yellowGreen" class="pencil pencil-yellow-green">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-yellow-green -->
+                    
+                    <div id="green" class="pencil pencil-green">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-green -->
+                    
+                    <div id="blueGreen" class="pencil pencil-blue-green">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-blue-green -->
+                    
+                    <div id="lightBlue" class="pencil pencil-light-blue">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-light-blue -->
+                    
+                    <div id="blue" class="pencil pencil-blue">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-blue -->
+                    
+                    <div id="blueViolet" class="pencil pencil-blue-violet">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-blue-violet -->
+                    
+                    <div id="violet" class="pencil pencil-violet">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-violet -->
+                    
+                    <div id="pink" class="pencil pencil-pink">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-pink -->
+                    
+                    <div id="black" class="pencil pencil-black">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-black -->
+                    
+                    <div id="gray" class="pencil pencil-gray">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-gray -->
+                    
+                    <div id="silver" class="pencil pencil-silver">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-silver -->
+                </div><!-- end .pencils -->
+            </div><!-- end .pencils-container -->
+            
+            <div class="pencils-label">
+                <span><i class="icon icon-left"></i> Slide <i class="icon icon-right"></i></span>
+            </div><!-- end .note-container -->
+        </div><!-- end .grid-col -->
+    </div><!-- end .tools-container -->
+</div><!-- end .main-container -->
+<div class="shadow-bottom content-container"></div>
+
+<!-- FabricJS -->

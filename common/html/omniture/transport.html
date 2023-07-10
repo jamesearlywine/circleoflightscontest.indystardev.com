@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Oniture Tracking Transport</title>
+        <!-- parse the publication title from the url querystring -->
+        <script>
+          var queryString = window.location.search;
+          var queryString = queryString.substring(1);
+          var parseQueryString = function( queryString ) {
+            var params = {}, queries, temp, i, l;
+           
+              // Split into key/value pairs
+              queries = queryString.split("&");
+           
+              // Convert the array of strings into an object
+              for ( i = 0, l = queries.length; i < l; i++ ) {
+                  temp = queries[i].split('=');
+                  params[temp[0]] = temp[1];
+              }
+           
+              return params;
+          };
+          var queryParams = parseQueryString(queryString);
+          // console.log('PDFViewer queryParms: ', queryParams);
+          
+          window.omnitureSection    = decodeURIComponent(queryParams.section);
+          window.omnitureExtension  = decodeURIComponent(queryParams.extension);
+          
+          // console.log('omniture section: ', window.omnitureSection);
+          // console.log('omniture extension: ', window.omnitureExtension);
+        </script>
+
+
+
+
+
+<!-- Omniture tracking code -->
+		
+<!-- ******************************************************************************************************************************************************
+		
+		START - Omniture code 
+			
+			>> Edit ONLY the url info. Be sure to use proper SSTS so that proper sections get credit. Then add your specific URL ending to s_prop3 & pageName variables.
+
+ ****************************************************************************************************************************************************** -->
+ 		
+ 		<link href="http://www.indystar.com/includes/css/ody/ody-local.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="http://www.indystar.com/odygci/p1/ody-styles-min.css"/>
+		
+ 		
+ 		<script type="text/javascript">
+			var xProp3 = "";
+			var xPgName = "";
+			
+			if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				xProp3  = 'indystar :/story/' + window.omnitureSection  + '/' + window.omnitureExtension + ' - (Mobile)'; 
+				xPgName = 'indystar :/story/' + window.omnitureSection  + '/' + window.omnitureExtension + ' - (Mobile)';				
+			} else if ( /iPad/i.test(navigator.userAgent) ) { 					
+				xProp3  = 'indystar :/story/' + window.omnitureSection  + '/' + window.omnitureExtension + ' - (iPad)'; 
+				xPgName = 'indystar :/story/' + window.omnitureSection  + '/' + window.omnitureExtension + ' - (iPad)';				
+			} else {
+				xProp3  = 'indystar :/story/' + window.omnitureSection  + '/' + window.omnitureExtension + '';
+				xPgName = 'indystar :/story/' + window.omnitureSection  + '/' + window.omnitureExtension + '';
+			}
+
+		</script>
+ 
+		
+		<!-- Add omniture data -->
+		<!-- Module sets MT OAS and omniture variables -->
+		<MT:Include module="global_set_oas_omniture" />
+		
+		<!-- add omniture variables to script like this s_prop2='' -->
+		<script type="text/javascript">	
+			OAS_listpos='728x90_1,FLEX_1,728x90_2';
+			
+			// UPDATE the following URL for omniture purposes - based upon how you wish omniture to track, replace the 'xxxxx' with appropraite SSTS. Example: life, news, sports, etc. 
+			OAS_sitepage='in-indianapolis.indystar.com/sponsor-story/article.htm';
+			
+			s_prop1='star';
+			s_prop2='star/sponsor-story'; // UPDATE xxxxx with SSTS - Example: life, news, sports, etc.
+			//s_prop3='indystar :/story/xxxxx/xxxxx'; // UPDATE your URL ending in place of this second 'xxxxx' - the 1st is for SSTS
+			s_prop3=xProp3;
+			s_prop6='sponsor-story';
+			s_prop7='sponsor-story'; // UPDATE xxxxx with SSTS - Example: life, news, sports, etc.
+			s_prop16='article';
+			//s_pageName='indystar :/story/xxxxx/xxxxx'; // UPDATE your URL ending in place of this second 'xxxxx' - the 1st is for SSTS
+			s_pageName=xPgName;
+			var navselect='sponsor-story';  // UPDATE xxxxx with SSTS - Example: life, news, sports, etc.
+		</script>
+		
+<!-- ******************************************************************************************************************************************************
+		
+		END - Omniture code 
+
+ ****************************************************************************************************************************************************** -->
+        
+        
+    </head>
+    
+    
+    <body>
+        
+        
+        
+<!-- ******************************************************************************************************************************************************
+
+
+
+				Do not edit below this line. 
+				
+				Really. 
+				
+				Don't do it. 
+				
+				I mean, sure if you want to see civilization crumble back to the dark ages, then by all means, go ahead and edit below this line.
+
+				Even after all that warning… your still thinking about. Aren't you?
+
+
+****************************************************************************************************************************************************** -->		
+			<!--Site Catalyst macro -->
+			<!-- sitecatalyst.pbo version 1.47 2007.11.07 -->
+			<!-- Added tracking for Pluck pages -->
+			<!-- Previous version (1.46 2007.06.06) comments: -->
+		
+			<!-- Added rsiseg validation for sites not running zag -->
+			<!-- Changed RSI categorization value to be other for non SSTS sections -->
+			<script type="text/javascript">
+			if(typeof gcion_enable_bt != 'undefined') {
+			  if(gcion_enable_bt) {
+			  document.writeln('<scr'+'ipt type="text/javascript" src="http://js.revsci.net/gateway/gw.js?csid=J06575" charset="ISO-8859-1"></s' + 'cript>');
+			  }
+			}
+			</script>
+			<s_suiteID_default value="indystar" />
+			<!-- SiteCatalyst code version: H.3. Copyright 1997-2005 Omniture, Inc. More info available at http://www.omniture.com -->
+			<script type="text/javascript" language="JavaScript">
+			<!--
+			s_account="gpaper138,gntbcstglobal,globaldesktopmobilesuite";
+			s_prop50="Newspaper";
+			g_affilSstatId="gpaper138";
+			g_affil_domain="gpaper138";
+			//-->
+			</script>
+			<cobrandsitedomain value="www" />
+			<sitedomain value="indystar" />
+		
+			<script type="text/javascript" language="JavaScript" src="http://content.gannettonline.com/global/s_code/s_code.js"></script>
+			<script type="text/javascript" language="JavaScript" src="http://www.indystar.com/scripts/s_local_customization.js"></script>
+			<script type="text/javascript" language="JavaScript">
+			if(typeof gcion_enable_bt != 'undefined') {
+			  if(gcion_enable_bt) {
+				  var gciYear = 2008;
+				  DM_addToLoc("zipcode", escape(s.prop30));
+				  DM_addToLoc("age", escape((gciYear-s.prop31)));
+			    DM_addToLoc("gender", escape(s.prop32));
+					DM_tag();
+			    try
+			    {
+			      if (gdn_version == 2)
+			      {
+			        // Sets the "rsi_segs" cookie in GCION domain
+			        if (gcion_enable_bt) {
+			          if (GCION.Cookies.Cookie.Exists(gcion_session_cookie)) {
+			            var session = GCION.Cookies.BrowserSession.GetData(gcion_session_cookie);
+			            if (session.UpdateBTCookie == 1 && !GCION.Utils.Data.IsNullOrEmpty(rsinetsegs))
+			            {
+			              GCION.Utils.Include.Once(GCION.Utils.Data.GetGcionUrl("q=5&Segment=" + escape(rsinetsegs.join('|'))));
+			              session.UpdateBTCookie = 0;
+			              GCION.Cookies.BrowserSession.Create(gcion_session_cookie, session);
+			            }
+			          }
+			        }
+			      }
+			      else
+			      {
+			        // Sets the "rsi_segs" cookie in GCION domain
+			        if (gdn_enable_bt)
+			        {
+			          if (GDN.Cookie.Exists(GDN.Cookies.Session.Name))
+			          {
+			            var updateBtCookie = GDN.Cookies.Session.GetValue("ubt");
+			            if (updateBtCookie == "1" && !GDN.IsNullOrEmpty(rsinetsegs))
+			            {
+			              GDN.Rpc.Send(GDN.RegUrl("q=5&Segment=" + escape(rsinetsegs.join('|'))));
+			              GDN.Cookies.Session.SetValue("ubt", "0");
+			            }
+			          }
+			        }
+			      }
+			    }
+			    catch (e)
+			    {
+			      // Sets the "rsi_segs" cookie in GCION domain
+			      if (gdn_enable_bt)
+			      {
+			        if (GDN.Cookie.Exists(GDN.Cookies.Session.Name))
+			        {
+			          var updateBtCookie = GDN.Cookies.Session.GetValue("ubt");
+			          if (updateBtCookie == "1" && !GDN.IsNullOrEmpty(rsinetsegs))
+			          {
+			            GDN.Rpc.Send(GDN.RegUrl("q=5&Segment=" + escape(rsinetsegs.join('|'))));
+			            GDN.Cookies.Session.SetValue("ubt", "0");
+			          }
+			        }
+			      }
+			    }
+				}
+			}
+			</script>
+			<script type="text/javascript" language="JavaScript">
+			<!--
+			s.server="publicus"
+			if(typeof s_pageName!='undefined'){s.pageName=s_pageName}else{s.pageName=""}
+			if(typeof s_channel!='undefined'){s.channel=s_channel}
+			if(typeof s_pageType!='undefined'){s.pageType=s_pageType}
+			if(typeof s_prop1!='undefined'){s.prop1=s_prop1}else{s.prop1="star"}
+			if(typeof s_prop2!='undefined'){s.prop2=s_prop2}else{s.prop2=""}
+			if(typeof s_prop3!='undefined'){s.prop3=s_prop3}else{s.prop3=""}
+			if(typeof s_prop4!='undefined'){s.prop4=s_prop4}else{s.prop4=""}
+			if(typeof s_prop5!='undefined'){s.prop5=s_prop5}else{s.prop5=""}
+			if(typeof s_prop6!='undefined'){s.prop6=s_prop6}else{s.prop6=""}
+			if(typeof s_prop7!='undefined'){s.prop7=s_prop7}else{s.prop7=""}
+			if(typeof s_prop8!='undefined'){s.prop8=s_prop8}else{s.prop8=""}
+			s.prop23=document.location
+			s.prop16='article'
+			s.prop25="Indianapolis:indystar"
+			if(typeof rsinetsegs!='undefined'){s.prop48=(rsinetsegs.join('|')).replace(/J06575_/g,'');}else{s.prop48='no segment';}
+			s.prop50=s_prop50;
+			if(s.prop7){s.eVar5=s.prop7;}
+			if(s.prop25){s.eVar1=s.prop25;}
+			/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+			var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+			<script language="JavaScript"><!--
+			if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+			//--></script>
+			<noscript><img src="http://gpaper138.112.2O7.net/b/ss/gpaper138,gntbcstglobal,globaldesktopmobilesuite/1/H.3--NS/0"	height="1" width="1" border="0" alt="" /></noscript>
+		
+			<!--/DO NOT REMOVE/-->
+			<!-- End SiteCatalyst code version: H.3. -->  
+			
+			
+			
+			
+    </body>
+</html>

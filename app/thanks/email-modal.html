@@ -1,0 +1,76 @@
+<div>
+    <div class="modal-header">
+        <h3 class="modal-title">Send E-mail</h3>
+    </div>
+    
+    <!-- form -->
+    <form id="thanks-email-form"
+        ng-show="!emailSent"
+    >
+    <div class="modal-body">
+        <div class="form-field">
+      	  <label for="senderEmail">Sender's E-mail Address</label>
+      	  <input type="text" 
+      	         id="senderEmail" 
+    	           name="senderEmail" 
+    	           class="input-textbox" 
+    	           ng-model="emailData.from"
+    	           required>
+      	</div><!-- end .form-field -->
+      	
+      	<div class="form-field">
+      	  <label for="recipientEmail">Recipient's E-mail Address</label>
+      	  <input type="text" 
+      	         id="recipientEmail" 
+    	           name="recipientEmail" 
+    	           class="input-textbox" 
+    	           ng-model="emailData.to"
+    	           required
+    	           >
+      	</div><!-- end .form-field -->
+      	
+      	<div class="form-field">
+      	  <label for="customMessage">Custom Message (optional)</label>
+      	  <textarea id="customMessage" 
+      	            name="customMessage" 
+    	            class="input-textarea" 
+    	            ng-model="emailData.message"
+          >
+    	  </textarea>
+      	</div><!-- end .form-field -->
+    </div>
+    <div class="modal-footer">
+        <input class="button button-orange" 
+               type="button" 
+               value="Send"
+               ng-click="sendEmail()"
+               >
+        <input class="button button-blue" 
+               type="button" 
+               value="Cancel"
+               ng-click="cancel()"
+               >
+    </div>
+    </form>
+    
+    <!-- thank you -->
+    <div
+        ng-show="emailSent"
+    >
+        <div class="modal-body"
+            ng-show="!emailError"
+        >
+            <p>Your message has been sent!</p>
+        </div>
+        <div class="modal-body"
+            ng-show="emailError"
+        >
+            <p>Sorry, something went wrong. Your message was not sent.</p>
+        </div>
+        
+        
+    </div>
+    
+</div>
+
+

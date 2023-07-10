@@ -1,0 +1,52 @@
+<!-- page specific css -->
+<link href='app/thanks/thanks.css?ver=2' rel="stylesheet">
+
+<div class="header-container content-container">
+    <div class="shadow-top content-container"></div>
+    <div class="banner">
+        <a ng-href="#/app/home"><img src="common/img/DigitalColoringContestHeader.jpg" class="img-responsive" alt="Carson's Coloring Contest for Circle of Lights" /></a>
+    </div><!-- end .banner -->
+</div><!-- end .header-container -->
+
+<div class="main-container content-container">
+    <div class="grid-row">
+        <div class="grid-col-md-12" style="text-align:center;">
+            <h1 class="section-heading thanks-heading">Thank You</h1>
+            <p>Your contest entry has been submitted!</p>
+            <p>
+                <a ng-href="#/app/home" class="button button-blue"><i class="icon icon-home">Go Home</i></a>
+                <a  
+                    class="button button-blue"
+                    ng-click="reportMoreInformation()"
+                    href="http://www.downtownindy.org/happening-downtown/hot/circle-of-lights" 
+                    target="_blank" 
+                >
+                    <i class="icon icon-right-circle">More Information</i>
+                </a>
+            </p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+        </div>
+    </div><!-- end .grid-row -->
+    
+</div><!-- end .main-container -->
+
+<div id="footer" class="footer-container content-container">
+    <div class="footer-nav">
+        <div class="social">
+            <a ng-click="share('facebook')"><i class="icon icon-facebook-squared"></i></a>
+            <a ng-click="share('twitter')"><i class="icon icon-twitter"></i></a>
+            <a ng-click="share('googleplus')"><i class="icon icon-googleplus-rect"></i></a>
+            <a ng-click="share('pinterest')"><i class="icon icon-pinterest"></i></a>
+            <a ng-click="openSendmail()"><i class="icon icon-mail"></i></a>
+        </div><!-- end .social -->
+        
+        <a href="http://www.indystar.com" target="_blank"><img src="common/img/indystar-logo.jpg" alt="IndyStar logo" class="indystar-logo" /></a>
+    </div><!-- end .footer-nav -->
+    
+
+    
+    <div class="shadow-bottom content-container"></div>
+</div><!-- end .footer-container -->

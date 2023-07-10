@@ -1,0 +1,257 @@
+<!-- page specific css -->
+<link href='app/canvas/canvas.css?ver=20' rel="stylesheet">
+<script src="app/canvas/canvas-tools.js"></script>
+
+<div class="header-container content-container">
+    <div class="shadow-top content-container"></div>
+    <div class="buttons">
+        <div class="grid-row">
+            <div class="grid-col-xs-4 align-left">
+                <a ng-href="#/app/home" class="button button-default"><i class="icon icon-left-circle"><span class="button-label">Back</span></i></a>
+            </div>
+            <div class="grid-col-xs-4 align-center">
+                <a onclick="javascript:clearCanvas();" class="button button-default"><i class="icon icon-ccw"><span class="button-label">Start Over</span></i></a>
+            </div>
+            <div class="grid-col-xs-4 align-right">
+                <a ng-href="#/app/preview" class="button button-orange"><i class="icon icon-ok"><span class="button-label"> I'm Done</span></i></a>
+            </div>
+        </div><!-- end .grid-row -->
+    </div><!-- end .buttons -->
+</div><!-- end .header-container -->
+
+<p>Kaye is editing this right now</p>
+<div class="main-container content-container">
+    <div id="canvasContainer" class="canvas-container" style="height:1105px">
+        <img id="coloringPhoto" src="../common/img/coloring-canvas.png" class="coloring-photo" alt="coloring page" />
+        <canvas id="canvas" class="canvas"></canvas>
+    </div><!-- end .canvas-container -->
+
+    <div class="tools-container grid-row">
+        <div class="grid-col-md-4 center">
+            <div class="grid-row no-padding">
+                <div class="eraser-container grid-col-md-12 grid-col-xs-5 no-padding">
+                    <img src="../../common/img/eraser.png" class="eraser" alt="eraser" onclick="javascript:setColor('0');" />
+                </div>
+                
+                <div class="point-size-container grid-col-md-12 grid-col-xs-7 no-padding">
+                    <span class="point-size point-size-1" onclick="javascript:setPointSize(10);"></span>
+                    <span class="point-size point-size-2 point-size-selected" onclick="javascript:setPointSize(20);"></span>
+                    <span class="point-size point-size-3" onclick="javascript:setPointSize(40);"></span>
+                    <span class="point-size point-size-4" onclick="javascript:setPointSize(60);"></span>
+                </div>
+            </div><!-- end .grid-row -->
+        </div><!-- end .grid-col -->
+        
+        <div class="grid-col-md-8">
+            <div class="pencils-container">
+                <div class="pencils">
+                    <div class="pencil pencil-brown" onclick="javascript:setColor(1);">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-brown -->
+                    
+                    <div class="pencil pencil-maroon" onclick="javascript:setColor(2);">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-maroon -->
+                    
+                    <div class="pencil pencil-red pencil-selected" onclick="javascript:setColor(3);">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-red -->
+                    
+                    <div class="pencil pencil-red-orange" onclick="javascript:setColor(4);">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-red-orange -->
+                    
+                    <div class="pencil pencil-orange" onclick="javascript:setColor(5);">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-orange -->
+                    
+                    <div class="pencil pencil-yellow" onclick="javascript:setColor(6);">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-yellow -->
+                    
+                    <div class="pencil pencil-gold" onclick="javascript:setColor(7);">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-gold -->
+                    
+                    <div class="pencil pencil-yellow-green" onclick="javascript:setColor(8);">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-yellow-green -->
+                    
+                    <div class="pencil pencil-green" onclick="javascript:setColor(9);">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-green -->
+                    
+                    <div class="pencil pencil-blue-green" onclick="javascript:setColor(10);">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-blue-green -->
+                    
+                    <div class="pencil pencil-light-blue" onclick="javascript:setColor(11);">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-light-blue -->
+                    
+                    <div class="pencil pencil-blue" onclick="javascript:setColor(12);">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-blue -->
+                    
+                    <div class="pencil pencil-blue-violet" onclick="javascript:setColor(13);">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-blue-violet -->
+                    
+                    <div class="pencil pencil-violet" onclick="javascript:setColor(14);">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-violet -->
+                    
+                    <div class="pencil pencil-pink" onclick="javascript:setColor(15);">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-pink -->
+                    
+                    <div class="pencil pencil-black" onclick="javascript:setColor(16);">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-black -->
+                    
+                    <div class="pencil pencil-gray" onclick="javascript:setColor(17);">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-gray -->
+                    
+                    <div class="pencil pencil-silver" onclick="javascript:setColor(18);">
+                        <div class="pencil-body">
+                            <span class="pencil-top"></span>
+                            <span class="pencil-bottom"></span>
+                        </div>
+                        
+                        <div class="pencil-dressing">
+                            <span>&nbsp;</span>
+                        </div>
+                    </div><!-- end .pencil-silver -->
+                </div><!-- end .pencils -->
+            </div><!-- end .pencils-container -->
+            
+            <div class="label-container">
+                <span><i class="icon icon-left"></i> Slide <i class="icon icon-right"></i></span>
+            </div><!-- end .note-container -->
+        </div><!-- end .grid-col -->
+    </div><!-- end .tools-container -->
+</div><!-- end .main-container -->
+<div class="shadow-bottom content-container"></div>
+
+<!-- Drawer -->
+<script src="app/canvas/drawer.js"></script>

@@ -1,0 +1,247 @@
+<!-- page specific css -->
+<link href='app/preview/preview.css?ver=11' rel="stylesheet">
+
+<div class="header-container content-container">
+    <div class="shadow-top content-container"></div>
+    <div class="banner">
+        <a ng-href="#/app/home"><img src="common/img/DigitalColoringContestHeader.jpg" class="img-responsive" alt="Carson's Coloring Contest for Circle of Lights" /></a>
+    </div><!-- end .banner -->
+</div><!-- end .header-container -->
+
+<div class="main-container content-container no-print">
+    <div class="grid-row no-padding">
+        <div class="grid-col-md-12">
+           <p style="text-align:left;"><a ng-href="#/app/canvas" class="button button-default"><i class="icon icon-left-circle">Back to Canvas</i></a></p>
+           <h1 class="section-heading">Preview</h1>
+       </div>
+    </div><!-- end .grid-row -->
+    
+    <div class="grid-row no-padding">
+        <div class="grid-col-md-8">
+            <div class="preview-container">
+                <div class="preview">
+                    <div class="grid-row no-padding">
+                        <div class="grid-col-sm-4 no-padding">
+                            <img src="common/img/coloring-page-header.png" class="img-responsive paper-header" alt="coloring page" />
+                        </div><!-- end .grid-col -->
+    
+                        <div class="grid-col-sm-8 no-padding">
+                            <div class="page-form">
+                                <div class="grid-row">
+                                    <div class="grid-col-xs-12 field">
+                                        <span>Child's Name:</span> 
+                                        <div class="user-input">
+                                            <span class="data" ng-bind="submission.name"></span>
+                                        </div>
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                                
+                                <div class="grid-row">
+                                    <div class="grid-col-xs-4 field">
+                                        <span>Age:</span>
+                                        <div class="user-input">
+                                            <span class="data" ng-bind="submission.age"></span>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="grid-col-xs-8 field">
+                                        <span>Daytime Phone:</span> 
+                                        <div class="user-input">
+                                            <span class="data" ng-bind="submission.phone"></span>
+                                        </div>
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                                
+                                <div class="grid-row">
+                                    <div class="grid-col-xs-12 field">
+                                        <span>Parent's Name:</span> 
+                                        <div class="user-input">
+                                            <span class="data" ng-bind="submission.parentName"></span>
+                                        </div>
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                                
+                                <div class="grid-row">
+                                    <div class="grid-col-xs-12 field">
+                                        <span>Parent's E-mail:</span>
+                                        <div class="user-input">
+                                            <span class="data" ng-bind="submission.email"></span>
+                                        </div>
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                                
+                                <div class="grid-row">
+                                    <div class="grid-col-xs-5 field">
+                                        <span>Zip code:</span> 
+                                        <div class="user-input">
+                                            <span class="data" ng-bind="submission.zipCode"></span>
+                                        </div>
+                                    </div><!-- end col -->
+                                    
+                                    <div class="grid-col-xs-7 field">
+                                        <span style="text-align:right; font-size:0.65em;">*Your information will not be sold or shared with additional partners.</span>
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                            </div><!-- end .page-form -->
+                        </div><!-- end .grid-col -->
+                    </div><!-- end .grid-row -->
+                    
+                    <div class="preview-image-container">
+                        <img class="preview-image img-responsive" ng-src="{{previewImageDataURL}}"/>
+                    </div>
+                    
+                    <div>
+                        <img src="common/img/coloring-page-footer.png" class="img-responsive" alt="coloring page" />
+                    </div>
+                </div><!-- end .preview -->
+            </div><!-- end .preview-container -->
+            
+            <div class="grid-row action-buttons no-padding">
+                <div class="grid-col-sm-6 action-buttons">
+                    <a class="button button-blue"
+                        ng-click="print()"
+                    >
+                        <i class="icon icon-print"> Print</i>
+                    </a> 
+                    <a class="button button-blue"
+                        ng-click="downloadContestSubmission()"
+                        target="_blank"
+                    >
+                        <i class="icon icon-download"> Download</i>
+                    </a>
+                </div>
+                
+                <div class="grid-col-sm-6 social">
+                    <a ng-click="share('facebook')"><i class="icon icon-facebook-squared"></i></a>
+                    <a ng-click="share('twitter')"><i class="icon icon-twitter"></i></a>
+                    <a ng-click="share('googleplus')"><i class="icon icon-googleplus-rect"></i></a>
+                    <a ng-click="share('pinterest')"><i class="icon icon-pinterest"></i></a>
+                    <a ng-click="openSendmail()"><i class="icon icon-mail"></i></a>
+                </div>
+            </div><!-- end .social -->
+        </div><!-- end col -->
+        
+                            
+        <!-- sidebar -->
+        <div class="grid-col-md-4">
+            <div class="page-sidebar">
+                <p>
+                    <span class="bold">Return Carson's coloring contest entries to:</span>
+                    <br><span class="bold">Carson’s Department Store</span>, Circle Centre, One W. Washington Street, Indianapolis, Street level, adjacent to the escalator.
+                </p>
+                <p>
+                    <span class="bold">Mail or Drop Off to:</span>
+                    <br><span class="bold">IBEW #481</span>
+                    <br>1828 N. Meridian Street, Suite 205
+                    <br>Indianapolis, IN 46202
+                </p>
+            </div><!-- end .page-sidebar -->
+        </div><!-- end .grid-col -->
+    </div><!-- end .grid-row -->
+</div><!-- end .main-container -->
+
+<div id="footer" class="footer-container content-container">
+    <div class="footer-nav">
+        <a href="http://www.indystar.com" target="_blank"><img src="common/img/indystar-logo.jpg" alt="IndyStar logo" class="indystar-logo" /></a>
+    </div><!-- end .footer-nav -->
+    
+
+    
+    <div class="shadow-bottom content-container"></div>
+</div><!-- end .footer-container --> 
+
+
+<!-- PRINT ONLY -->
+<div class="print-only ng-scope no-padding"
+        id="preview-print"
+    >
+    <div class="main-container content-container no-padding">
+        <div class="grid-row no-padding">
+            <div class="grid-col-md-12 no-padding">
+                <div class="preview">
+                    <div class="grid-row no-padding">
+                        <div class="grid-col-xs-4 no-padding">
+                            <img src="common/img/coloring-page-header.png" class="img-responsive paper-header" alt="coloring page">
+                        </div><!-- end .grid-col -->
+                        
+                        <div class="grid-col-xs-8 no-padding">
+                            <div class="page-form">
+                                <div class="grid-row">
+                                    <div class="grid-col-xs-12 field">
+                                        <span>Child's Name:</span> 
+                                        <div class="user-input">
+                                            <span class="data ng-binding" ng-bind="submission.name"></span>
+                                        </div>
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                                
+                                <div class="grid-row">
+                                    <div class="grid-col-xs-3 field">
+                                        <span>Age:</span>
+                                        <div class="user-input">
+                                            <span class="data ng-binding" ng-bind="submission.age"></span>
+                                        </div>
+                                    </div><!-- end col -->
+                                    <div class="grid-col-xs-9 field">
+                                        <span>Daytime Phone:</span> 
+                                        <div class="user-input">
+                                            <span class="data ng-binding" ng-bind="submission.phone"></span>
+                                        </div>
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                                
+                                <div class="grid-row">
+                                    <div class="grid-col-xs-12 field">
+                                        <span>Parent's Name:</span> 
+                                        <div class="user-input">
+                                            <span class="data ng-binding" ng-bind="submission.parentName"></span>
+                                        </div>
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                                
+                                <div class="grid-row">
+                                    <div class="grid-col-xs-12 field">
+                                        <span>Parent's E-mail:</span>
+                                        <div class="user-input">
+                                            <span class="data ng-binding" ng-bind="submission.email"></span>
+                                        </div>
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                                
+                                <div class="grid-row">
+                                    <div class="grid-col-xs-5 field">
+                                        <span>Zip code:</span> 
+                                        <div class="user-input">
+                                            <span class="data ng-binding" ng-bind="submission.zipCode"></span>
+                                        </div>
+                                    </div><!-- end col -->
+                                    
+                                    <div class="grid-col-xs-7 field">
+                                        <span style="text-align:right; font-size:0.65em;">*Your information will not be sold or shared with additional partners.</span>
+                                    </div><!-- end col -->
+                                </div><!-- end row -->
+                            </div><!-- end .page-form -->
+                        </div><!-- end .grid-col -->
+                    </div><!-- end .grid-row -->
+                    
+                    <div class="preview-image-container">
+                        <img class="preview-image img-responsive" ng-src="{{previewImageDataURL}}">
+                    </div>
+                    
+                    <div>
+                        <img src="common/img/coloring-page-footer.png" class="img-responsive" alt="coloring page">
+                    </div>
+                </div><!-- end .preview -->
+            </div><!-- end col -->
+        </div><!-- end .grid-row -->
+        
+        
+        <div id="preview-print-page-2"
+             class="print-only"
+        >
+            <img src="common/img/CarsonsColoringContest_print-2.png"
+                    style="width: 100%;"
+            />
+        </div>
+    </div><!-- end .main-container -->
+</div><!-- end .print-only -->
+<!-- END PRINT ONLY -->

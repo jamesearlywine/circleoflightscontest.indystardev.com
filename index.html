@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base href="./" target="_self"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <meta property="og:title" content="Carson's Circle of Lights Coloring Contest" />
+        <meta property="og:image" content="common/img/DigitalColoringContestHeader-thumbnail.jpg" />
+        <meta property="og:description" content="Kids ages 3-12 are invited to enter Carson's Coloring Contest for a chance to 'flip the switch' at Circle of Lights Nov. 25 in Downtown Indy. Five finalists will each win a College Choice 529 Direct Savings Plan and a Carson's gift card. Enter by Nov. 14." />
+        
+        <title>Carson's Circle of Lights Coloring Contest</title>
+        <link href="common/css/normalize.css" rel="stylesheet">
+        <link href="common/fonts/fontello/css/fontello.css" rel="stylesheet">
+
+        <!-- Angular UI styles -->
+        <link href="common/bower_components/angular-ui/build/angular-ui.min.css" rel="stylesheet">
+        
+        <!-- Bootstrap JS -->
+        <!-- License: https://github.com/twbs/bootstrap/blob/master/LICENSE -->
+        <link href="common/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- Normalize.css makes browsers render all elements more consistently and in line with modern standards -->
+        <link href="common/css/normalize.css" rel="stylesheet">
+
+        <!-- Default responsive style templates -->
+        <link href="common/css/responsive.css" rel="stylesheet">
+
+        <!-- Common styles -->
+        <link href="common/css/styles.css" rel="stylesheet">
+        <link href="common/css/spinner.css" rel="stylesheet"/>
+        
+        <!-- Print CSS -->
+        <link href="common/css/print.css" rel="stylesheet".
+        
+        <!-- timers -->
+        <script src="common/js/lib/timers.js"></script>
+        
+        <!-- appReady timer -->
+        <script> window.timers.create('appReady').start(); </script>
+        
+    </head>
+    <body ng-app="coloringbook">
+        <!-- busy/loading animation -->
+        <span class="spinner-backdrop"
+                ng-show="showBackdrop"
+        >
+            <span   us-spinner="{
+                        lines     :13,
+                        length    :28,
+                        width     :14,
+                        radius    :42,
+                        scale     :1.00,
+                        corners   :1.0,
+                        opacity   :0.25,
+                        rotate    :0,
+                        direction :1,
+                        speed     :1.0,
+                        trail     :60,
+                        color     :'white'
+                    }"
+                    spinner-key="busy"
+            ></span>    
+        </span>
+        <div ui-view
+             ng-animate
+             class="app-content content-container">
+        </div>
+        
+        <div ng-if="$root.showSidePencils" class="blue side-pencil"></div>
+        <div ng-if="$root.showSidePencils" class="orange side-pencil"></div>
+        <div ng-if="$root.showSidePencils" class="green side-pencil"></div>
+        
+        <!-- jQuery -->
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        
+        
+        
+        
+        <!-- Responsive js -->
+        <script src="common/js/responsive.js"></script>
+        <!-- General 3rd Party -->
+        <script src="common/bower_components/html2canvas/build/html2canvas.min.js"></script>
+        <script src="common/js/lib/blobjs/blob.js"></script>
+        <script src="common/js/lib/blobjs/canvas-toBlob.js"></script>
+        <script src="common/bower_components/filesaver/FileSaver.min.js"></script>
+        <script src="common/bower_components/angular/angular.min.js"></script>
+        <script src="common/bower_components/angular-ui/build/angular-ui.min.js"></script>
+        <script src="common/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="common/bower_components/angular-animate/angular-animate.js"></script>
+        <script src="common/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="common/bower_components/ui-router-extras/release/ct-ui-router-extras.min.js"></script>
+        <script src="common/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+        <script src="common/bower_components/lodash/lodash.min.js"></script>
+        <script src="common/bower_components/ng-lodash/build/ng-lodash.min.js"></script>
+        <script src="common/bower_components/spin.js/spin.min.js"></script>
+        <script src="common/bower_components/angular-spinner/angular-spinner.min.js"></script>
+
+        <!-- jQuery validator -->
+        <script src="common/js/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="common/js/jquery-validation/dist/additional-methods.min.js"></script>
+        
+        
+        <!-- Fabric -->
+        <!-- FabricJS Library -->
+        <script src="common/bower_components/fabric/dist/fabric.js"></script>
+        <!-- Fabric AngularJS Files https://github.com/michaeljcalkins/angular-fabric 
+             (may need some extension / modification, so not concatenated and minified) 
+             (module common.fabric is fabric.js)
+             -->
+        <script src="common/js/lib/angular-fabric/fabric.js"></script> 
+        <script src="common/js/lib/angular-fabric/fabricCanvas.js"></script>
+        <script src="common/js/lib/angular-fabric/fabricConstants.js"></script>
+        <script src="common/js/lib/angular-fabric/fabricDirective.js"></script>
+        <script src="common/js/lib/angular-fabric/fabricDirtyStatus.js"></script>
+        <script src="common/js/lib/angular-fabric/fabricUtilities.js"></script>
+        <script src="common/js/lib/angular-fabric/fabricWindow.js"></script>
+        
+        
+        <!-- Browser Detect -->
+        <script src="common/js/lib/browser-detect.js"></script>
+        <!-- Environmental Variables Container -->
+        <script src="environment.js"></script>
+        
+        <!-- Bootstrap JS -->
+        <!-- License: https://github.com/twbs/bootstrap/blob/master/LICENSE -->
+        <script src="common/bootstrap/js/bootstrap.min.js"></script>
+        
+        <!-- App Files -->
+        <script src="app.js"></script>
+        
+        <!-- Routable Modules/Controllers -->
+        <script src="app/home/home.js"></script>
+        <script src="app/canvas/canvas.js"></script>
+        <script src="app/preview/preview.js"></script>
+        <script src="app/thanks/thanks.js"></script>
+
+        <!-- Services -->
+        <script src="common/js/services/ColoringBookService.js"></script>
+        <script src="common/js/services/DimensionsService.js"></script>
+        <script src="common/js/services/ShareService.js"></script>
+        <script src="common/js/services/EmailService.js"></script>
+        <script src="common/js/services/SubmissionService.js"></script>
+        <script src="common/js/services/Base64PNGUploadService.js"></script>
+        <script src="common/js/services/HistoryService.js"></script>
+        <script src="common/js/services/OmnitureService.js"></script>
+        <script src="common/js/services/ActionTrackingService.js"></script>
+
+        <!-- Filters -->
+
+    </body>
+</html>

@@ -1,0 +1,133 @@
+<!-- page specific css -->
+<link href='app/canvas/canvas.css?ver=19' rel="stylesheet">
+<div class="header-container content-container">
+    <div class="shadow-top content-container"></div>
+    <div class="buttons">
+        <div class="grid-row no-padding">
+            <div class="grid-col-xs-4 align-left">
+                <a ng-href="#/app/home" class="button button-default"><i class="icon icon-left-circle"><span class="button-label">Back</span></i></a>
+            </div>
+            <div class="grid-col-xs-4 align-center">
+                <a id="clear-canvas" 
+                    class="button button-default"
+                    ng-click="clearCanvas()"    
+                    >
+                    <i class="icon icon-ccw">
+                        <span class="button-label">Start Over</span>
+                    </i>
+                </a>
+            </div>
+            <div class="grid-col-xs-4 align-right">
+                <a ng-click="doneDrawing()" class="button button-orange"><i class="icon icon-ok"><span class="button-label"> I'm Done</span></i></a>
+            </div>
+        </div><!-- end .grid-row -->
+    </div><!-- end .buttons -->
+</div><!-- end .header-container -->
+
+<div class="main-container canvas-main content-container noselect">
+    <div id="canvasContainer">
+        <canvas id="canvas" 
+                fabric="fabric" 
+                options="initialCanvasConfig"
+                ></canvas>
+    </div><!-- end .canvas-container -->
+
+    <div class="grid-row tools-container noselect">
+        <div class="grid-col-md-12 center">
+            <div class="grid-row no-padding">
+                <div id="eraser" 
+                        class="eraser-container grid-col-xs-5 no-padding noselect"
+                        ng-click="selectEraser()"
+                        
+                >
+                    <img id="eraser" 
+                            ng-mouseover="brushOver('eraser')"
+                            ng-mouseleave="brushOut('eraser')"
+                            src="common/img/eraser.png" 
+                            class="eraser" alt="eraser"
+                            ng-class="{
+                                'noselect'         : true,
+                                'eraser-selected'  : (selectedColor.name == 'eraser'),
+                                'eraser-over'      : (hoverBrush == 'eraser')
+                            }"
+                    />
+                </div>
+                
+                <div class="point-size-container grid-col-xs-7 no-padding">
+                    <span class="size-label">SIZE:</span>
+                    <div id="size1" 
+                            class="point-size point-size-1 noselect"
+                            ng-click="setBrushSize(10)"
+                            ng-attr-style="{{(brushSize == 10) ? 'background-color: ' + selectedColor.code + ';' : ''}}" 
+                            ng-class="{
+                                'point-size-selected' : (brushSize == 10)
+                            }"
+                    ></div>
+                    <div id="size2" 
+                            class="point-size point-size-2 noselect"
+                            ng-click="setBrushSize(20)"
+                            ng-attr-style="{{(brushSize == 20) ? 'background-color: ' + selectedColor.code + ';' : ''}}" 
+                            ng-class="{
+                                'point-size-selected' : (brushSize == 20)
+                            }"
+                    ></div>
+                    <div id="size3" 
+                            class="point-size point-size-3 noselect"
+                            ng-click="setBrushSize(40)"
+                            ng-attr-style="{{(brushSize == 40) ? 'background-color: ' + selectedColor.code + ';' : ''}}" 
+                            ng-class="{
+                                'point-size-selected' : (brushSize == 40)
+                            }"
+                    ></div>
+                    <div id="size4" 
+                            class="point-size point-size-4 noselect"
+                            ng-click="setBrushSize(60)"
+                            ng-attr-style="{{(brushSize == 60) ? 'background-color: ' + selectedColor.code + ';' : ''}}" 
+                            ng-class="{
+                                'point-size-selected' : (brushSize == 60)
+                            }"
+                    ></div>
+                </div>
+            </div><!-- end .grid-row -->
+        </div><!-- end .grid-col -->
+        
+        <div class="grid-col-md-12">
+            <div class="pencils-container">
+                <div class="pencils">
+                    
+                        <div ng-repeat="(color, code) in colors"
+                             ng-attr-id="{{color}}" 
+                             ng-click="selectColor(color)"
+                             ng-class="{
+                                 'pencil'             : true,
+                                 'noselect'           : true,
+                                 'pencil-selected'    : (selectedColor.name == color),
+                                 'pencil-over'        : (hoverBrush == color)
+                             }"
+                             ng-mouseover="brushOver(color)"
+                             ng-mouseleave="brushOut(color)"
+                             >
+                            <div class="pencil-body">
+                                <span class="pencil-top"
+                                        "
+                                        ng-attr-style="{{'border-bottom: 76px solid '+ code +';'}}"
+                                ></span>
+                                <span class="pencil-bottom"
+                                      ng-attr-style="{{'background-color: ' + code + ';'}}"
+                                ></span>
+                            </div>
+                            <div class="pencil-dressing">
+                                <span>&nbsp;</span>
+                            </div>
+                        </div><!-- end .pencil -->
+                    
+                </div><!-- end .pencils -->
+            </div><!-- end .pencils-container -->
+            
+            <div class="pencils-label">
+                <span><i class="icon icon-left"></i> Slide <i class="icon icon-right"></i></span>
+            </div><!-- end .note-container -->
+        </div><!-- end .grid-col -->
+    </div><!-- end .tools-container -->
+</div><!-- end .main-container -->
+<div class="shadow-bottom content-container"></div>
